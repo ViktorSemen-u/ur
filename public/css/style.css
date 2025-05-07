@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header {
+    color: #ffffff;
+    background: #232423;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 10px;
+    align-items: center;
+}
+
+header .header_nav {
+    padding:20px 15px;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+header .header_nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header .header_nav a:hover {
+    color: #cacaca;
+}
+
+header .header_user {
+    padding:20px 15px;
+    margin-left: auto;
+}
+
+/* header .header_nav ul {
+    display: flex;
+    align-items: center;
+} */
+
+
+/* header nav ul {
+    display: flex;
+    align-items: center;
+} */
+
+/* header nav a {
+    text-decoration: none;
+    color: #ffffff;
+} */
+
+/* header .header_user {
+    padding:20px 15px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+header .header_user a {
+    text-decoration: none;
+    color: #ffffff;
+} */
+
+/* header .header_nav ul li a {
+    display:block;
+    padding:20px 15px;
+} */
+
+/* header ul li a {
+    display:block;
+    padding:20px 15px;
+}
+
+header ul li a:hover {
+    background: #363636;
+} */
+
+header button.green {
+    color: #ffffff;
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-left:20px;
+    cursor: pointer;
+}
+
+header button.green:hover {
+    background-color: rgba(0, 135, 169, 0.445);
+}
+
+.center_block_main {
+    display: flex;
+    margin: auto 0;
+    height: 100%;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+main h1 {
+    margin: 20px 30px 20px 0;
+}
+
+main h4 {
+    margin: 20px 30px 20px 0;
+}
+
+/* main ul li {
+    margin: 20px 30px 20px 0;
+}
+
+main .grid {
+    display: flex;
+}
+
+main .grid .grid_item {
+    margin-right: 20px;
+} */
+
+footer {
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    background: #232423;
+}

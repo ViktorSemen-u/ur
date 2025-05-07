@@ -2,18 +2,44 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
-
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
+        <title>{% block title %}Система реєстрації користувача{% endblock %}</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        {% block body %}{% endblock %}
+    {% block body %}
+        <header>
+        {% block header %}
+            {% block header_nav %}
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="{{ path('app_home') }}">Головна</a></li>
+                </ul>
+            </nav>
+            {% endblock %}
+            {% block header_user %}
+            {% endblock %}
+
+ {#       {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <button class="green"><a href="{{ path('app_logout') }}">Вихід</a></button>
+        {% else %}
+            <button class="green"><a href="{{ path('app_login') }}">Вхід</a></button>
+            <button class="green"><a href="{{ path('app_register') }}">Реєстрація</a></button>
+        {% endif %}
+#}            <a href="#"><button class="green">Вхід</button></a>
+            <a href="#"><button class="green">Реєстрація</button></a>
+        
+        {% endblock %}
+        </header>
+
+        <div class="center_block_main">
+            <main>
+            {% block main_cont %}
+            {% endblock %}
+            </main>
+        </div>
+
+        <footer></footer>
+
+    {% endblock %}
     </body>
 </html>
