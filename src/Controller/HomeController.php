@@ -29,10 +29,12 @@ class HomeController extends AbstractController
         // $home = $this->getDoctrine()->getRepository(Home::class)->find(1);
         // dd($home);
         // dump($home).die;
+        // dump($this->getUser()).die;
         // dump($home);
         // var_dump($home);
+
         return $this->render('home/index.html.twig', [
-            'user_name' => 'не зреєстрований',
+            'user_name' =>  is_null($this->getUser()) ? 'не зареєстрований' : $this->getUser()->getUsername(),
         ]);
     }
 }

@@ -11,8 +11,8 @@ html {
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    font-size: 13px;
+    /* font-family: "Montserrat", sans-serif;
+    font-size: 13px; */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -51,61 +51,14 @@ header .header_user {
     margin-left: auto;
 }
 
-/* header .header_nav ul {
-    display: flex;
-    align-items: center;
-} */
-
-
-/* header nav ul {
-    display: flex;
-    align-items: center;
-} */
-
-/* header nav a {
-    text-decoration: none;
-    color: #ffffff;
-} */
-
-/* header .header_user {
-    padding:20px 15px;
-    color: #ffffff;
-    font-weight: bold;
-    margin-right: auto;
+header .header_nav ul {
+    margin-bottom: 0;
 }
 
-header .header_user a {
-    text-decoration: none;
-    color: #ffffff;
-} */
-
-/* header .header_nav ul li a {
-    display:block;
-    padding:20px 15px;
-} */
-
-/* header ul li a {
-    display:block;
-    padding:20px 15px;
+header a.btn.btn-primary {
+    margin-left: 5px;
 }
 
-header ul li a:hover {
-    background: #363636;
-} */
-
-header button.green {
-    color: #ffffff;
-    padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: 1px solid gray;
-    border-radius: 10px;
-    margin-left:20px;
-    cursor: pointer;
-}
-
-header button.green:hover {
-    background-color: rgba(0, 135, 169, 0.445);
-}
 
 .center_block_main {
     display: flex;
@@ -120,24 +73,12 @@ main {
     flex-direction: column;
 }
 
-main h1 {
+/* main h1 {
     margin: 20px 30px 20px 0;
 }
 
 main h4 {
     margin: 20px 30px 20px 0;
-}
-
-/* main ul li {
-    margin: 20px 30px 20px 0;
-}
-
-main .grid {
-    display: flex;
-}
-
-main .grid .grid_item {
-    margin-right: 20px;
 } */
 
 footer {
