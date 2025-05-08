@@ -19,15 +19,15 @@
             {% block header_user %}
             {% endblock %}
 
- {#       {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-            <button class="green"><a href="{{ path('app_logout') }}">Вихід</a></button>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <a href="{{ path('app_logout') }}"><button class="green">Вихід</button></a>
         {% else %}
-            <button class="green"><a href="{{ path('app_login') }}">Вхід</a></button>
-            <button class="green"><a href="{{ path('app_register') }}">Реєстрація</a></button>
+            <a href="{{ path('app_login') }}"><button class="green">Вхід</button></a>
+            <a href="{{ path('app_register') }}"><button class="green">Реєстрація</button></a>
         {% endif %}
-#}            <a href="#"><button class="green">Вхід</button></a>
+{#            <a href="#"><button class="green">Вхід</button></a>
             <a href="#"><button class="green">Реєстрація</button></a>
-        
+#}        
         {% endblock %}
         </header>
 
