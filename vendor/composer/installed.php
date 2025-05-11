@@ -427,6 +427,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'symfony/google-mailer' => array(
+            'pretty_version' => 'v5.3.14',
+            'version' => '5.3.14.0',
+            'reference' => '737f906b6e5fc204308029035d0945078458e0fb',
+            'type' => 'symfony-bridge',
+            'install_path' => __DIR__ . '/../symfony/google-mailer',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'symfony/http-client-contracts' => array(
             'pretty_version' => 'v2.5.5',
             'version' => '2.5.5.0',
@@ -756,6 +765,15 @@
             'install_path' => __DIR__ . '/../symfony/var-exporter',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'symfony/web-profiler-bundle' => array(
+            'pretty_version' => 'v5.3.14',
+            'version' => '5.3.14.0',
+            'reference' => 'd0bf5f7ecf8c49594ddc53e5cdb7929f9b401988',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/web-profiler-bundle',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
         'symfony/yaml' => array(
             'pretty_version' => 'v5.3.14',

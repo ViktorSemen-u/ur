@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
@@ -30,7 +31,7 @@ class RegistrationFormType extends AbstractType
                         'message' => 'Please enter a ім\'я користувача.',
                     ]),
                     new Length([
-                        'min' => 6,
+                        'min' => 3,
                         'minMessage' => 'Your Username should be at least {{ limit }} characters',
                         'max' => 4096,
                     ]),
@@ -49,6 +50,9 @@ class RegistrationFormType extends AbstractType
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Please enter a Email',
+                    ]),
+                    new Email([
+                        'message' => "Значення '{{ value }}' не є валідною адресою email.",
                     ]),
                     new Length([
                         'min' => 6,

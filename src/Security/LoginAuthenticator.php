@@ -54,10 +54,6 @@ class LoginAuthenticator extends AbstractLoginFormAuthenticator
         // For example:
         return new RedirectResponse($this->urlGenerator->generate('app_home'));
         // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
-        // return $this->render('home/index.html.twig', [
-        //     'user_name' => 'не зареєстрований',
-        // $homeController = new HomeController('зареєстрований');
-        // return $homeController->index();
     }
 
     protected function getLoginUrl(Request $request): string
