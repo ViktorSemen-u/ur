@@ -50,7 +50,7 @@ class RegistrationController extends AbstractController
 // dd($this);
             $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
                 (new TemplatedEmail())
-                    ->from(new Address('viktorsemenu@gmail.com', 'My Mail Bot'))
+                    ->from(new Address('mail1@we.lc', 'My Mail Bot'))
                     ->to($user->getEmail())
                     ->subject('Please Confirm your Email')
                     ->htmlTemplate('registration/confirmation_email.html.twig')
@@ -73,7 +73,7 @@ class RegistrationController extends AbstractController
     public function verifyUserEmail(Request $request): Response
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
-dd($this);
+//dd($this);
         // validate email confirmation link, sets User::isVerified=true and persists
         try {
             $this->emailVerifier->handleEmailConfirmation($request, $this->getUser());

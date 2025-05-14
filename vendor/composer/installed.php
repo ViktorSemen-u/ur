@@ -427,15 +427,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'symfony/google-mailer' => array(
-            'pretty_version' => 'v5.3.14',
-            'version' => '5.3.14.0',
-            'reference' => '737f906b6e5fc204308029035d0945078458e0fb',
-            'type' => 'symfony-bridge',
-            'install_path' => __DIR__ . '/../symfony/google-mailer',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'symfony/http-client-contracts' => array(
             'pretty_version' => 'v2.5.5',
             'version' => '2.5.5.0',
