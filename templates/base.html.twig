@@ -14,6 +14,7 @@
             <nav class="header_nav">
                 <ul>
                     <li><a href="{{ path('app_home') }}">Головна</a></li>
+                    <li><a href="{{ path('app_about') }}">Про</a></li>
                 </ul>
             </nav>
             {% endblock %}
@@ -34,6 +35,14 @@
 
         <div class="center_block_main">
             <main>
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ label }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+
             {% block main_cont %}
             {% endblock %}
             </main>

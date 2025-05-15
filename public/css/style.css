@@ -52,7 +52,12 @@ header .header_user {
 }
 
 header .header_nav ul {
+    display: flex;
     margin-bottom: 0;
+}
+
+header .header_nav ul li {
+    margin-left: 1rem;
 }
 
 header a.btn.btn-primary {
