@@ -43,8 +43,23 @@ class RegistrationController extends AbstractController
                 )
             );
             $user->setEmail($form->get('userEmail')->getData());
-            $entityManager->persist($user);
-            $entityManager->flush();
+            try
+            {
+                $entityManager->persist($user);
+                $entityManager->flush();
+                $this->addFlash('success', 'Користувач успішно збережений!');
+            }
+            catch (\Exception $e)
+            {
+                // $this->addFlash('danger', 'Виникла помилка при збереженні користувача: ' . $e->getMessage());
+                // $this->addFlash('danger', 'Виникла помилка при збереженні користувача: ' . $e->getCode());
+                $this->addFlash('danger', 'Користувач ' . ($e->getCode() == 1062 ? '"' . $form->get('username')->getData() . '" вже існує.' : ''));
+                // $this->addFlash('success', 'Дані були успішно збережені!');
+                // $this->addFlash('info', 'Будь ласка, зверніть увагу на це повідомлення.');
+                // $this->addFlash('warning', 'Деякі поля були заповнені некоректно.');
+                // $this->addFlash('danger', 'Виникла помилка під час обробки запиту.');
+                return $this->redirectToRoute('app_register');
+            }
 
             // generate a signed url and email it to the user
 // dd($this);
