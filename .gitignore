@@ -7,3 +7,4 @@
 /public/bundles/
 /var/
 ###< symfony/framework-bundle ###
+public/adminer/index.php
